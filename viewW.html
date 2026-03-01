@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>People List</title>
+</head>
+<body>
+
+{{range .}}
+    <div>
+        <h2>{{.Name}}</h2>
+        <p>Gender: {{.Gender}}</p>
+
+        <p>Hobbies:</p>
+        <ul>
+            {{range .Hobbies}}
+                <li>{{.}}</li>
+            {{end}}
+        </ul>
+
+        <p>Club: {{.Info.ClubName}}</p>
+        <p>City: {{.Info.City}}</p>
+    </div>
+    <hr>
+{{end}}
+
+</body>
+</html>
